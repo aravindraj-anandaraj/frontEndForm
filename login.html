@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="loginForm">
+        <label>First name : </label>
+        <input id="firstName" name="firstName" type="text" required autocomplete="off"><br>
+        <label>Last name : </label>
+        <input id="lastName" name="lastName" type="text" required autocomplete="off"><br>
+        <label>Middle name : </label>
+        <input id="middleName" name="middleName" type="text" required autocomplete="off"><br>
+        <label>Address : </label>
+        <input id="address" name="address" type="text" required autocomplete="off"><br>
+        <label>Country : </label>
+        <select id="countries" name="countries" required autocomplete="off"></select><br>
+        <label>Zip Code : </label>
+        <!-- Zip Code regex is set to 5 numbers -->
+        <input id="zipCode" name="zipCode" type="text" pattern="[0-9]{5}" placeholder="#####" required autocomplete="off"><br>
+        <label>Email : </label>
+        <!-- Basic Email validation is done by specifying type -->
+        <input id="email" name="email" type="email" required autocomplete="off"><br>
+        <label>Phone Number : </label>
+        <!-- Sample phone number format handled : +##-########-->
+        <input id="phNumber" name="phNumber" type="tel" pattern="\+[0-9]{2}-[0-9]{10}" placeholder="+##-##########" required autocomplete="off"><br>
+        <label>Height (Ft/inches) : </label>
+        <input id="height" name="height" type="number" pattern="[0-9]{2,3}" required autocomplete="off"><br>
+        <label>Weight (Kgs) : </label>
+        <input id="weight" name="weight" type="number" pattern="[0-9]{2,3}" required autocomplete="off"><br>
+        <button>Submit Form</button>
+    </form>
+    <ul id="loginData">
+    </ul>
+    <script src="./main.js"></script>
+</body>
+</html>
